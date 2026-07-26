@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pickled — Pickleball Session Organizer</title>
+<meta name="description" content="Pickled is a native iOS app for organizing casual pickleball sessions — track players, courts, and locations, and auto-generate fair match-ups every round.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Pickled — Pickleball Session Organizer">
+<meta property="og:description" content="Organize casual pickleball sessions with fair, automatic match-ups every round.">
+<meta property="og:url" content="https://app.myers.io/pickled/">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥒</text></svg>">
+<style>
+  :root {
+    --green: #4c7a34;
+    --green-dark: #385a26;
+    --lime: #a3c644;
+    --ink: #1d2417;
+    --muted: #5c6752;
+    --bg: #f6f8f1;
+    --card: #ffffff;
+    --line: #e3e8d7;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+    line-height: 1.55;
+  }
+  a { color: var(--green); }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 0 20px; }
+  header.hero {
+    background: linear-gradient(160deg, var(--green) 0%, var(--green-dark) 100%);
+    color: #fff;
+    padding: 72px 0 60px;
+    text-align: center;
+  }
+  .logo { font-size: 64px; line-height: 1; }
+  header.hero h1 { font-size: 2.6rem; margin: 12px 0 6px; letter-spacing: -0.02em; }
+  header.hero p.tag { font-size: 1.25rem; margin: 0 auto; max-width: 640px; color: #eef4e0; }
+  .cta {
+    display: inline-block; margin-top: 26px; padding: 13px 26px;
+    background: var(--lime); color: var(--ink); font-weight: 700;
+    border-radius: 999px; text-decoration: none;
+  }
+  .cta.secondary { background: rgba(255,255,255,0.15); color: #fff; margin-left: 8px; }
+  section { padding: 56px 0; }
+  section h2 { font-size: 1.8rem; margin: 0 0 8px; text-align: center; }
+  section .lede { text-align: center; color: var(--muted); max-width: 640px; margin: 0 auto 36px; }
+  .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; }
+  .feature {
+    background: var(--card); border: 1px solid var(--line); border-radius: 14px;
+    padding: 22px;
+  }
+  .feature .ico { font-size: 26px; }
+  .feature h3 { margin: 10px 0 6px; font-size: 1.1rem; }
+  .feature p { margin: 0; color: var(--muted); font-size: 0.96rem; }
+  .shots { display: flex; gap: 16px; overflow-x: auto; padding: 6px 0 12px; scroll-snap-type: x mandatory; }
+  .shots img {
+    height: 460px; border-radius: 22px; border: 1px solid var(--line);
+    background: #fff; scroll-snap-align: center; flex: 0 0 auto;
+  }
+  footer {
+    border-top: 1px solid var(--line); padding: 30px 0; text-align: center;
+    color: var(--muted); font-size: 0.9rem;
+  }
+  footer a { color: var(--green); text-decoration: none; }
+  @media (max-width: 520px) {
+    header.hero h1 { font-size: 2rem; }
+    .shots img { height: 380px; }
+  }
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <div class="logo">🥒</div>
+    <h1>Pickled</h1>
+    <p class="tag">The easiest way to run a casual pickleball session. Track your players, courts, and locations — and get fair match-ups generated for you, round after round.</p>
+    <a class="cta" href="#features">See features</a>
+    <a class="cta secondary" href="/pickled/support/">Support</a>
+  </div>
+</header>
+
+<section id="features">
+  <div class="wrap">
+    <h2>Everything you need for game night</h2>
+    <p class="lede">Pickled keeps a session moving so you can spend less time organizing and more time playing.</p>
+    <div class="features">
+      <div class="feature">
+        <div class="ico">👥</div>
+        <h3>Player roster</h3>
+        <p>Maintain a saved list of players and track how often each has played and sat out.</p>
+      </div>
+      <div class="feature">
+        <div class="ico">📍</div>
+        <h3>Locations &amp; courts</h3>
+        <p>Save the places you play, each with its own set of named, ordered courts.</p>
+      </div>
+      <div class="feature">
+        <div class="ico">🎾</div>
+        <h3>Fair match-ups</h3>
+        <p>Constraint-solving generates balanced pairings and minimizes repeats, in singles or doubles.</p>
+      </div>
+      <div class="feature">
+        <div class="ico">👑</div>
+        <h3>King of the Court</h3>
+        <p>Competitive mode where winners move up a court and losers move down between rounds.</p>
+      </div>
+      <div class="feature">
+        <div class="ico">⏱️</div>
+        <h3>Match timer</h3>
+        <p>Built-in timer with an alarm and a Live Activity, for timed or points-based sessions.</p>
+      </div>
+      <div class="feature">
+        <div class="ico">📊</div>
+        <h3>Session stats</h3>
+        <p>Review who played, who sat out, and how each match turned out.</p>
+      </div>
+      <div class="feature">
+        <div class="ico">🏆</div>
+        <h3>Tournaments</h3>
+        <p>Organize bracket-style tournament play for your group.</p>
+      </div>
+      <div class="feature">
+        <div class="ico">☁️</div>
+        <h3>iCloud sync</h3>
+        <p>Players and locations sync across your devices via iCloud.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
+  <div class="wrap">
+    <h2>Take a look</h2>
+    <p class="lede">A quick tour of Pickled on iPhone.</p>
+    <div class="shots">
+      <img src="screenshots/01_Home.png" alt="Home screen" loading="lazy">
+      <img src="screenshots/02_NewSession.png" alt="Creating a new session" loading="lazy">
+      <img src="screenshots/03_Gameplay.png" alt="Gameplay and match cards" loading="lazy">
+      <img src="screenshots/04_Players.png" alt="Player management" loading="lazy">
+      <img src="screenshots/05_Stats.png" alt="Session statistics" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>Pickled is a native iOS app. Requires iOS 18.5 or later.</p>
+    <p><a href="/pickled/support/">Support</a> &nbsp;·&nbsp; <a href="/">app.myers.io</a> &nbsp;·&nbsp; <a href="https://myers.io/">myers.io</a></p>
+    <p>&copy; Dale Myers</p>
+  </div>
+</footer>
+</body>
+</html>

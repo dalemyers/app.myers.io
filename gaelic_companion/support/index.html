@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Unofficial Gaelic Companion — Support</title>
+<meta name="description" content="Support and help for Unofficial Gaelic Companion, an independent iPhone and iPad player for user-imported Gaelic lesson audio.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎧</text></svg>">
+<script>
+  (() => {
+    const param = new URLSearchParams(window.location.search).get("scoutTheme");
+    const theme = param === "light" || param === "dark"
+      ? param
+      : (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    document.documentElement.setAttribute("data-theme", theme);
+  })();
+</script>
+<style>
+:root {
+  color-scheme: light;
+  --cp-bg: #f7f4ef;
+  --cp-bg-elevated: #fcfbf8;
+  --cp-surface: #ffffff;
+  --cp-surface-soft: #f5f5f5;
+  --cp-border: #dedede;
+  --cp-border-strong: #919191;
+  --cp-text: #242424;
+  --cp-text-muted: #5c5c5c;
+  --cp-text-soft: #6f6f6f;
+  --cp-accent: #b11f4b;
+  --cp-accent-hover: #9a1a41;
+  --cp-accent-soft: rgba(177, 31, 75, 0.08);
+  --cp-accent-fg: #ffffff;
+  --cp-success: #16a34a;
+  --cp-danger: #dc2626;
+  --cp-warning: #f59e0b;
+  --cp-link: #0078d4;
+  --cp-shadow: 0 18px 48px rgba(0, 0, 0, 0.12);
+  --cp-overlay: rgba(255, 255, 255, 0.8);
+  --cp-panel: rgba(255, 255, 255, 0.86);
+  --cp-panel-strong: rgba(255, 255, 255, 0.96);
+  --cp-sheen: rgba(255, 255, 255, 0.55);
+  --cp-highlight: rgba(177, 31, 75, 0.12);
+}
+html[data-theme="dark"] {
+  color-scheme: dark;
+  --cp-bg: #3d3b3a;
+  --cp-bg-elevated: #343231;
+  --cp-surface: #292929;
+  --cp-surface-soft: #2e2e2e;
+  --cp-border: #474747;
+  --cp-border-strong: #5f5f5f;
+  --cp-text: #dedede;
+  --cp-text-muted: #919191;
+  --cp-text-soft: #b0b0b0;
+  --cp-accent: #fd8ea1;
+  --cp-accent-hover: #fb7b91;
+  --cp-accent-soft: rgba(253, 142, 161, 0.14);
+  --cp-accent-fg: #1a1a1a;
+  --cp-success: #4ade80;
+  --cp-danger: #f87171;
+  --cp-warning: #fbbf24;
+  --cp-link: #4da6ff;
+  --cp-shadow: 0 18px 48px rgba(0, 0, 0, 0.32);
+  --cp-overlay: rgba(41, 41, 41, 0.88);
+  --cp-panel: rgba(41, 41, 41, 0.72);
+  --cp-panel-strong: rgba(41, 41, 41, 0.96);
+  --cp-sheen: rgba(255, 255, 255, 0.04);
+  --cp-highlight: rgba(253, 142, 161, 0.12);
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: "Segoe UI", Aptos, Calibri, -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--cp-text);
+  background: var(--cp-bg);
+  line-height: 1.65;
+}
+a { color: var(--cp-accent); text-underline-offset: 4px; }
+a:hover { color: var(--cp-accent-hover); }
+a:focus-visible, summary:focus-visible {
+  outline: 3px solid var(--cp-accent);
+  outline-offset: 4px;
+}
+.wrap { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+body.document .wrap { max-width: 800px; }
+header.hero { background: var(--cp-bg-elevated); padding: 64px 0 48px; text-align: center; }
+.logo { font-size: 56px; line-height: 1; }
+header.hero h1 { font-size: 2.5rem; line-height: 1.2; margin: 16px 0 12px; letter-spacing: -0.02em; }
+header.hero p { margin: 0 auto; max-width: 680px; color: var(--cp-text-muted); }
+header.hero .tag { font-size: 1.25rem; }
+header.hero .availability { margin-top: 16px; font-weight: 600; color: var(--cp-accent); }
+.cta {
+  display: inline-block; margin: 24px 4px 0; padding: 12px 24px;
+  background: var(--cp-accent); color: var(--cp-accent-fg);
+  font-weight: 700; border-radius: 0.625rem; text-decoration: none;
+}
+.cta:hover { background: var(--cp-accent-hover); color: var(--cp-accent-fg); }
+.cta.secondary { background: var(--cp-highlight); color: var(--cp-accent); }
+section, main { padding: 48px 0; }
+section h2 { font-size: 1.75rem; margin: 0 0 8px; text-align: center; }
+section .lede { text-align: center; color: var(--cp-text-muted); max-width: 680px; margin: 0 auto 32px; }
+.features { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+.feature, .card {
+  background: var(--cp-surface); border: 1px solid var(--cp-border); border-radius: 16px; padding: 24px;
+}
+.feature .ico { font-size: 28px; }
+.feature h3 { margin: 8px 0; font-size: 1.125rem; }
+.feature p { margin: 0; color: var(--cp-text-muted); }
+.preview { background: var(--cp-bg-elevated); border-block: 1px solid var(--cp-border); }
+.shots { display: flex; justify-content: center; gap: 16px; padding: 8px 0; }
+.shots img { width: auto; height: 560px; max-width: 100%; object-fit: contain; border-radius: 16px; }
+.card { margin-bottom: 24px; }
+.card h2 { font-size: 1.25rem; margin: 24px 0 8px; }
+.card h2:first-child { margin-top: 0; }
+.contact a { font-weight: 700; overflow-wrap: anywhere; }
+.hint, .updated { color: var(--cp-text-muted); }
+details { border-top: 1px solid var(--cp-border); padding: 16px 0; }
+details:first-of-type { border-top: 0; }
+summary { cursor: pointer; font-weight: 600; }
+details p { color: var(--cp-text-muted); margin: 8px 0 0; }
+footer {
+  border-top: 1px solid var(--cp-border); padding: 24px 0; text-align: center;
+  color: var(--cp-text-muted); font-size: 0.9rem;
+}
+@media (max-width: 520px) {
+  header.hero { padding: 40px 0 32px; }
+  header.hero h1 { font-size: 2rem; }
+  .wrap { padding: 0 16px; }
+  .card { padding: 20px; }
+  .shots img { height: auto; width: 280px; }
+}
+</style>
+</head>
+<body class="document">
+<header class="hero">
+  <div class="wrap">
+    <div class="logo" aria-hidden="true">🎧</div>
+    <h1>Unofficial Gaelic Companion Support</h1>
+    <p>We're happy to help you get the most out of Unofficial Gaelic Companion.</p>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <div class="card contact">
+      <h2>Contact us</h2>
+      <p>For help with the app, email Dale Myers.</p>
+      <p><a href="mailto:gaeliccompanion@myers.io?subject=Unofficial%20Gaelic%20Companion%20Support">gaeliccompanion@myers.io</a></p>
+      <p class="hint">Include the app version, your device model, iOS version, any error message, and steps to reproduce the problem. Do not send publisher recordings or personal audio libraries. <a href="/gaelic_companion/privacy/#website">How this website and support email handle your information</a>.</p>
+    </div>
+
+    <div class="card">
+      <h2>Frequently asked questions</h2>
+
+      <details open><summary>How do I add the audio?</summary><p>Open the publisher's download page using the link in the app. Download the original ZIP and save it in Files without extracting it. Return to the app, choose <strong>Import downloaded ZIP</strong>, and select it. Import only audio you are entitled to use. The app does not modify your source ZIP.</p></details>
+<details><summary>Are recordings or the book included?</summary><p>No. This is an independent player for user-imported audio, not a replacement for the book or its recordings. It is not affiliated with or endorsed by the book's authors or publisher.</p></details>
+<details><summary>Why will my ZIP not import?</summary><p>Use the original ZIP, not an extracted folder or an archive of combined recordings. The app expects individual MP3s with matching numeric track IDs and title metadata. Check that the download finished and that your device has free storage. Unsupported or damaged audio produces an error rather than replacing your existing library.</p></details>
+<details><summary>Why are some recordings missing?</summary><p>Only successfully imported recordings are shown. A supported but partial ZIP can import successfully; use <strong>About &amp; download → Replace imported audio</strong> with a complete original ZIP. Some lesson and section assignments are provisional and are identified in the app.</p></details>
+<details><summary>Can I listen without internet?</summary><p>Yes, after importing. Downloading the ZIP, accessing a cloud-based file in Files, and opening external support or publisher pages may need internet. Playback uses the recordings stored on your device.</p></details>
+<details><summary>How does listening progress work?</summary><p>A recording is marked listened when it finishes successfully. A lesson or section is complete only when all of its mapped recordings are listened, not just the ones you imported. Use a lesson menu or swipe a row to change listened status manually. Playback does not automatically advance to the next recording.</p></details>
+<details><summary>How do I skip introductions or replay a phrase?</summary><p>Enable <strong>Skip spoken introductions</strong> in <strong>About &amp; download</strong>. Recordings with a valid intro marker start at that point; other recordings start normally. You can always seek back, or use the five-second backward and forward controls. Pausing and resuming keeps your current playback position.</p></details>
+<details><summary>There is no sound. What should I check?</summary><p>Select a recording, check your playback volume, and check whether audio is going to headphones or another output device. If an error appears, include its text when contacting support.</p></details>
+<details><summary>Can I replace audio without losing progress?</summary><p>Yes. Choose <strong>About &amp; download → Replace imported audio</strong>. A successful replacement preserves listened status. If replacement fails or is cancelled, the previous library remains available.</p></details>
+<details><summary>How do I remove my data?</summary><p>Use <strong>Reset all listening progress</strong> in <strong>About &amp; download</strong> to clear listened status without removing audio. Deleting the app, rather than offloading it, removes its local library and preferences. Manage your original ZIP and device backups separately. There is no app-operated cloud sync.</p></details>
+<details><summary>Which devices does it support, and is it on the App Store?</summary><p>The app is designed for iPhone and iPad running iOS or iPadOS 17 or later. It is not yet published on the App Store and is planned as a free app, without ads, purchases, or accounts. The repository's Mac intro editor is a separate developer tool and is not needed to use the iPhone or iPad app.</p></details>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><a href="/gaelic_companion/">← Back to Unofficial Gaelic Companion</a> &nbsp;·&nbsp; <a href="/gaelic_companion/privacy/">Privacy</a> &nbsp;·&nbsp; <a href="/">app.myers.io</a></p>
+    <p>&copy; Dale Myers</p>
+  </div>
+</footer>
+</body>
+</html>

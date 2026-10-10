@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Unofficial Gaelic Companion — Privacy Policy</title>
+<meta name="description" content="Privacy policy for Unofficial Gaelic Companion, an independent iPhone and iPad player for user-imported Gaelic lesson audio.">
+<meta name="robots" content="index, follow">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎧</text></svg>">
+<script>
+  (() => {
+    const param = new URLSearchParams(window.location.search).get("scoutTheme");
+    const theme = param === "light" || param === "dark"
+      ? param
+      : (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    document.documentElement.setAttribute("data-theme", theme);
+  })();
+</script>
+<style>
+:root {
+  color-scheme: light;
+  --cp-bg: #f7f4ef;
+  --cp-bg-elevated: #fcfbf8;
+  --cp-surface: #ffffff;
+  --cp-surface-soft: #f5f5f5;
+  --cp-border: #dedede;
+  --cp-border-strong: #919191;
+  --cp-text: #242424;
+  --cp-text-muted: #5c5c5c;
+  --cp-text-soft: #6f6f6f;
+  --cp-accent: #b11f4b;
+  --cp-accent-hover: #9a1a41;
+  --cp-accent-soft: rgba(177, 31, 75, 0.08);
+  --cp-accent-fg: #ffffff;
+  --cp-success: #16a34a;
+  --cp-danger: #dc2626;
+  --cp-warning: #f59e0b;
+  --cp-link: #0078d4;
+  --cp-shadow: 0 18px 48px rgba(0, 0, 0, 0.12);
+  --cp-overlay: rgba(255, 255, 255, 0.8);
+  --cp-panel: rgba(255, 255, 255, 0.86);
+  --cp-panel-strong: rgba(255, 255, 255, 0.96);
+  --cp-sheen: rgba(255, 255, 255, 0.55);
+  --cp-highlight: rgba(177, 31, 75, 0.12);
+}
+html[data-theme="dark"] {
+  color-scheme: dark;
+  --cp-bg: #3d3b3a;
+  --cp-bg-elevated: #343231;
+  --cp-surface: #292929;
+  --cp-surface-soft: #2e2e2e;
+  --cp-border: #474747;
+  --cp-border-strong: #5f5f5f;
+  --cp-text: #dedede;
+  --cp-text-muted: #919191;
+  --cp-text-soft: #b0b0b0;
+  --cp-accent: #fd8ea1;
+  --cp-accent-hover: #fb7b91;
+  --cp-accent-soft: rgba(253, 142, 161, 0.14);
+  --cp-accent-fg: #1a1a1a;
+  --cp-success: #4ade80;
+  --cp-danger: #f87171;
+  --cp-warning: #fbbf24;
+  --cp-link: #4da6ff;
+  --cp-shadow: 0 18px 48px rgba(0, 0, 0, 0.32);
+  --cp-overlay: rgba(41, 41, 41, 0.88);
+  --cp-panel: rgba(41, 41, 41, 0.72);
+  --cp-panel-strong: rgba(41, 41, 41, 0.96);
+  --cp-sheen: rgba(255, 255, 255, 0.04);
+  --cp-highlight: rgba(253, 142, 161, 0.12);
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: "Segoe UI", Aptos, Calibri, -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--cp-text);
+  background: var(--cp-bg);
+  line-height: 1.65;
+}
+a { color: var(--cp-accent); text-underline-offset: 4px; }
+a:hover { color: var(--cp-accent-hover); }
+a:focus-visible, summary:focus-visible {
+  outline: 3px solid var(--cp-accent);
+  outline-offset: 4px;
+}
+.wrap { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+body.document .wrap { max-width: 800px; }
+header.hero { background: var(--cp-bg-elevated); padding: 64px 0 48px; text-align: center; }
+.logo { font-size: 56px; line-height: 1; }
+header.hero h1 { font-size: 2.5rem; line-height: 1.2; margin: 16px 0 12px; letter-spacing: -0.02em; }
+header.hero p { margin: 0 auto; max-width: 680px; color: var(--cp-text-muted); }
+header.hero .tag { font-size: 1.25rem; }
+header.hero .availability { margin-top: 16px; font-weight: 600; color: var(--cp-accent); }
+.cta {
+  display: inline-block; margin: 24px 4px 0; padding: 12px 24px;
+  background: var(--cp-accent); color: var(--cp-accent-fg);
+  font-weight: 700; border-radius: 0.625rem; text-decoration: none;
+}
+.cta:hover { background: var(--cp-accent-hover); color: var(--cp-accent-fg); }
+.cta.secondary { background: var(--cp-highlight); color: var(--cp-accent); }
+section, main { padding: 48px 0; }
+section h2 { font-size: 1.75rem; margin: 0 0 8px; text-align: center; }
+section .lede { text-align: center; color: var(--cp-text-muted); max-width: 680px; margin: 0 auto 32px; }
+.features { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+.feature, .card {
+  background: var(--cp-surface); border: 1px solid var(--cp-border); border-radius: 16px; padding: 24px;
+}
+.feature .ico { font-size: 28px; }
+.feature h3 { margin: 8px 0; font-size: 1.125rem; }
+.feature p { margin: 0; color: var(--cp-text-muted); }
+.preview { background: var(--cp-bg-elevated); border-block: 1px solid var(--cp-border); }
+.shots { display: flex; justify-content: center; gap: 16px; padding: 8px 0; }
+.shots img { width: auto; height: 560px; max-width: 100%; object-fit: contain; border-radius: 16px; }
+.card { margin-bottom: 24px; }
+.card h2 { font-size: 1.25rem; margin: 24px 0 8px; }
+.card h2:first-child { margin-top: 0; }
+.contact a { font-weight: 700; overflow-wrap: anywhere; }
+.hint, .updated { color: var(--cp-text-muted); }
+details { border-top: 1px solid var(--cp-border); padding: 16px 0; }
+details:first-of-type { border-top: 0; }
+summary { cursor: pointer; font-weight: 600; }
+details p { color: var(--cp-text-muted); margin: 8px 0 0; }
+footer {
+  border-top: 1px solid var(--cp-border); padding: 24px 0; text-align: center;
+  color: var(--cp-text-muted); font-size: 0.9rem;
+}
+@media (max-width: 520px) {
+  header.hero { padding: 40px 0 32px; }
+  header.hero h1 { font-size: 2rem; }
+  .wrap { padding: 0 16px; }
+  .card { padding: 20px; }
+  .shots img { height: auto; width: 280px; }
+}
+</style>
+</head>
+<body class="document">
+<header class="hero">
+  <div class="wrap">
+    <div class="logo" aria-hidden="true">🎧</div>
+    <h1>Unofficial Gaelic Companion Privacy Policy</h1>
+    <p>How Unofficial Gaelic Companion handles your information.</p>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <div class="card">
+      <p class="updated">Last updated: October 10, 2026</p>
+
+
+
+      <h2>The app</h2>
+      <p>Unofficial Gaelic Companion is developed by Dale Myers. It is a free, independent listening companion.
+      The app collects no data for the developer: it has no accounts, advertisements, analytics, tracking,
+      or third-party crash-reporting service. It does not send your recordings, listening progress,
+      or preferences to the developer.</p>
+
+      <h2>Information on your device</h2>
+      <p>When you select a ZIP in the system file picker, the app reads its audio files and title metadata
+      and copies supported recordings into its private storage. Listening progress and preferences are
+      stored separately on your device. ZIPFoundation processes archives locally; it does not upload them.</p>
+      <p>The app has no cloud-sync feature. Imported audio is excluded from the app's device backup.
+      Preferences and listening progress may be included in backups managed by your operating system.
+      A source ZIP you keep in iCloud Drive or another file provider remains subject to that provider's
+      settings and policies.</p>
+      <p>During playback, the app supplies the current recording's title, duration, and playback position
+      to iOS so it can display system media and lock-screen controls.</p>
+
+      <h2>Retention and deletion</h2>
+      <p>Imported recordings remain until you replace the library successfully or delete the app.
+      Replacing a library preserves listening progress. You can clear listening progress using
+      “Reset all listening progress” in “About &amp; download”. Deleting the app, rather than offloading
+      it, removes its local data; it does not delete your original ZIP or recordings in Files.
+      Manage any device backups and source files separately through their respective services.</p>
+
+      <h2>External websites</h2>
+      <p>The app opens the publisher's download page, the support site, and the online privacy policy
+      only when you choose those links. Those websites receive normal web requests and handle them
+      under their own privacy policies. Downloading the publisher's ZIP is a separate action outside
+      the app.</p>
+
+      <h2 id="website">This website</h2>
+      <p>The app's no-collection statement does not mean that visiting this website is anonymous.
+      This site is hosted on an Azure virtual server. Its nginx web server keeps standard access and
+      error logs, which may include your IP address, request time, requested URL, response status,
+      referring page, and browser information. These logs support operating and troubleshooting
+      the website. Logs are configured to rotate daily, retaining 14 rotated log files.</p>
+      <p>These Gaelic Companion pages do not set cookies or use analytics, advertising, or third-party
+      tracking scripts. Images and page resources are served by this site. A small script reads your
+      browser's light/dark preference, or a theme query parameter, to choose the page appearance;
+      it does not store or send that preference.</p>
+
+      <h2>Support correspondence</h2>
+      <p>If you email gaeliccompanion@myers.io, your email address, message, and any details you choose
+      to send are processed through the developer's email provider to respond to and investigate
+      your request. This is separate from data handled locally by the app. You can email the same
+      address to request deletion of support correspondence.</p>
+      <p>Please do not send book recordings, personal audio libraries, or sensitive personal information.
+      If you include a screenshot, check it for private information first.</p>
+
+      <h2>Changes to this policy</h2>
+      <p>If the app's data practices change, this policy and the App Store privacy disclosures will
+      be updated before those changes are released.</p>
+
+
+      <h2>Contact</h2>
+      <p>Questions about this policy or your privacy? Email
+      <a href="mailto:gaeliccompanion@myers.io?subject=Unofficial%20Gaelic%20Companion%20Privacy">gaeliccompanion@myers.io</a>.</p>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><a href="/gaelic_companion/">← Back to Unofficial Gaelic Companion</a> &nbsp;·&nbsp; <a href="/gaelic_companion/support/">Support</a> &nbsp;·&nbsp; <a href="/">app.myers.io</a></p>
+    <p>&copy; Dale Myers</p>
+  </div>
+</footer>
+</body>
+</html>
